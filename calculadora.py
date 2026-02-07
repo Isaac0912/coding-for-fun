@@ -17,7 +17,7 @@ elif math_operator == 5:
 
 print(answer)
 
-additional = int(input("Want add more number in the operator?  yes = 1  no = 2"))
+additional = int(input("Want add more number in the operator?  yes = 1  no = 2. "))
 
 while additional == 1:
 	math_operator2 = int(input('Choose an math operator: 1)Plus  2)Minus  3)Division  4)Multiplication  5)Exponentiation :  '))
@@ -25,26 +25,21 @@ while additional == 1:
 	if math_operator2 == 1:
 		answer = answer + number_c
 		print(answer)
-		additional = int(input("Want add more number in the operator?  yes = 1  no = 2"))
 	elif math_operator2 == 2:
 		answer = answer - number_c
 		print(answer)
-		additional = int(input("Want add more number in the operator?  yes = 1  no = 2"))
 	elif math_operator2 == 3:
 		answer = answer / number_c
 		print(answer)
-		additional = int(input("Want add more number in the operator?  yes = 1  no = 2"))
 	elif math_operator2 == 4:
 		answer = answer * number_c
 		print(answer)
-		additional = int(input("Want add more number in the operator?  yes = 1  no = 2"))
 	elif math_operator2 == 5:
 		answer = answer ** number_c
 		print(answer)
-		additional = int(input("Want add more number in the operator?  yes = 1  no = 2"))
 	else:
 		print('An error ocurred or Wrong input.')
-
+	additional = int(input("Want add more number in the operator?  yes = 1  no = 2. "))
 if additional == 2:
-	print('your result is ' + answer)
+	print('your result is ' + str(answer))
 
