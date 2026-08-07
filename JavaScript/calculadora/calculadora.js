@@ -1,31 +1,30 @@
-// a calculator using do_while, while, if  and else if.
-let numberA;
-let numberB;
-let numberC;
-let operator;
-let answer;
-let aditional;
+// a calculator with .
+let numberA, numberB, numberC, operator, aditional, result;
+function calculate(num1, operator, num2) {
+    let result;
+    if (operator === 1) {
+    result = num1 + num2;
+} else if (operator === 2) {
+    result = num1 - num2;
+} else if (operator === 3) {
+    result = num1 * num2;
+} else if (operator === 4) {
+    result = num1 / num2;
+} else if (operator === 5) {
+    result = num1 ** num2;
+} return result;
+}
 do {
     numberA = Number(prompt("Enter the first number."));
-    operator = Number(prompt(`Enter the operator by number:\n1-Plus\n2-Minus\n3-Multiplication
-    \n4-Division\n5-Exponentiation`));
+    operator = Number(prompt(`Enter the operator by number:\n1-Plus\n2-Minus\n3-Multiplication\n4-Division\n5-Exponentiation`));
     numberB = Number(prompt("Enter the second number."));
     if (operator < 1 || operator > 5) {
         alert("operator: wrong input.");
     }
 } while (operator < 1 || operator > 5);
 
-if (operator === 1) {
-    answer = numberA + numberB;
-} else if (operator === 2) {
-    answer = numberA - numberB;
-} else if (operator === 3) {
-    answer = numberA * numberB;
-} else if (operator === 4) {
-    answer = numberA / numberB;
-} else if (operator === 5) {
-    answer = numberA ** numberB;
-} alert(answer);
+result = calculate(numberA, operator, numberB);
+alert(result);
 
 do {
     aditional = prompt("Add another number? (y/n)").toLowerCase();
@@ -35,25 +34,15 @@ do {
 } while (aditional !== "y" && aditional !== "n");
     while (aditional === "y") {
     do {
-        operator = Number(prompt(`Enter the operator by number:\n1-Plus\n2-Minus\n3-Multiplication
-    \n4-Division\n5-Exponentiation`));
+        operator = Number(prompt(`Enter the operator by number:\n1-Plus\n2-Minus\n3-Multiplication\n4-Division\n5-Exponentiation`));
     numberC = Number(prompt("Enter the third number."));
     if (operator < 1 || operator > 5) {
         alert("operator: wrong input.");
     }
     } while (operator < 1 || operator > 5);
 
-    if (operator === 1) {
-    answer = answer + numberC;
-} else if (operator === 2) {
-    answer = answer - numberC;
-} else if (operator === 3) {
-    answer = answer * numberC;
-} else if (operator === 4) {
-    answer = answer / numberC;
-} else if (operator === 5) {
-    answer = answer ** numberC;
-} alert(answer);
+result = calculate(result, operator, numberC);
+alert(result);
 do {
     aditional = prompt("Add another number? (y/n)").toLowerCase();
     if (aditional !== "y" && aditional !== "n") {
@@ -62,5 +51,5 @@ do {
 } while (aditional !== "y" && aditional !== "n");
 }
 if (aditional === "n") {
-    alert(`Your result is ${answer}`);
+    alert(`The result is ${result}`);
 }
