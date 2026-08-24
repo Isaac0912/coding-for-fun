@@ -2,17 +2,23 @@
 let numberA, numberB, numberC, operator, aditional, result;
 function calculate(num1, operator, num2) {
     let result;
-    if (operator === 1) {
-    result = num1 + num2;
-} else if (operator === 2) {
-    result = num1 - num2;
-} else if (operator === 3) {
-    result = num1 * num2;
-} else if (operator === 4) {
-    result = num1 / num2;
-} else if (operator === 5) {
-    result = num1 ** num2;
-} return result;
+    switch(operator) {
+        case 1:
+            result = num1 + num2;
+            break;
+        case 2:
+            result = num1 - num2;
+            break;
+        case 3:
+            result = num1 * num2;
+            break;
+        case 4:
+            result = num1 / num2;
+            break;
+        case 5:
+            result = num1 ** num2;
+            break;
+    } return result;
 }
 do {
     numberA = Number(prompt("Enter the first number."));
